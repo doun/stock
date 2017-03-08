@@ -14,7 +14,7 @@ var metadata = {
 module.exports = {
   devtool: 'source-map', //to point console errors to ts files instead of compiled js
   entry: {
-    'main': './src/main.js', //app main file
+    'main': './src/main.ts', //app main file
   },
   output: {
     path: root('dist/js'),
