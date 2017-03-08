@@ -1,3 +1,3 @@
-import App from './App.vue'
+import My from './building.vue'
 
-export {App}
+export {My as my}
