@@ -15,6 +15,12 @@ module.exports = {
         loader: 'vue-loader',
         options: {
           loaders: {
+            ts:{
+              loader: 'ts-loader',
+              options:{
+                appendTsSuffixTo: [/\.vue$/]
+              }
+            }
           }
           // other vue-loader options go here
         }
@@ -22,6 +28,11 @@ module.exports = {
       {
         test: /\.js$/,
         loader: 'babel-loader',
+        exclude: /node_modules/
+      },
+      {
+        test: /\.ts$/,
+        loader: 'ts-loader',
         exclude: /node_modules/
       },
       {
