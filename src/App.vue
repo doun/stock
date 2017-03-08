@@ -5,7 +5,8 @@
 </template>
 
 <script lang='ts'>
-import './imports.ts'
+import Vue from 'vue'
+import {Component, Prop} from './common'
 
 @comp
 export default class App{
