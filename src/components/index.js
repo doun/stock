@@ -1,6 +1,3 @@
-import {Vue, ElementUI, comp, prop } from '../common'
-import Building from './building.vue'
+import App from './App.vue'
 
-Vue.component('building', Building)
-
-export {Building}
+export {App}
