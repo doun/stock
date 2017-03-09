@@ -7,11 +7,9 @@
             el-menu-item(index = '/') 库存
             el-menu-item(index = '123') 入库
         el-col#actions.is-align-middle(:span = 8, :offset = 4)
-          el-col(:span = 14)
-            el-form
-              el-form-item
-                el-input(placeholder='扫描条码')
-          el-col(:span = 10)
+          el-col(:span = 18)
+            el-input(placeholder='扫描条码')
+          el-col(:span = 6)
             building(:selected = "SelectedBuilding", :buildings = "buildings")
       el-row#main
 </template>
