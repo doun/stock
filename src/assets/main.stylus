@@ -1,0 +1,9 @@
+dark = #324157
+#top
+  background-color: dark 
+  margin-bottom: 10px
+  margin-left: 0
+  margin-right: 0 
+#main
+  background-color: dark
+  height: 200px

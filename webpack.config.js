@@ -39,11 +39,6 @@ module.exports = {
         exclude: /node_modules/
       },
       {
-        test: /\.pug$/,
-        loader: 'pug-loader',
-        exclude: /node_modules/
-      },
-      {
         test: /\.css$/,
         loader: 'style-loader!css-loader'
       },
@@ -62,7 +57,8 @@ module.exports = {
   },
   resolve: {
     alias: {
-      'vue$': 'vue/dist/vue.esm.js'
+      'vue$': 'vue/dist/vue.esm.js',
+      assets: path.resolve(__dirname, './src/assets')
     }
   },
   devServer: {
