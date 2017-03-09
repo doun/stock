@@ -1,6 +1,6 @@
 # stock
 
-> stock management using vuejs, typescript(UI only)
+> stock management project
 
 ## Build Setup
 

@@ -1,15 +1,13 @@
 <template>
-  <div>
-    hello {{msg}}
-  </div>
 </template>
 
 <script lang='ts'>
 import Vue from 'vue'
-import {Component, Prop} from 'vue-property-decorator'
-@Component
+import {Component as comp, Prop as prop} from 'vue-property-decorator'
+
+@comp
 export default class My extends Vue{
-  @Prop()
+  @prop
   msg: string
 }
 </script>

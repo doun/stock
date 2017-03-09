@@ -5,16 +5,12 @@
 </template>
 
 <script lang='ts'>
-import './imports.ts'
+import Vue from 'vue'
+import {Component as comp, Prop as prop} from 'vue-property-decorator'
 
 @comp
-export default class App{
+export default class App extends Vue{
   buildings = ['AL','LAL']
   SelectedBuilding = 'AL'
 }
-
 </script>
-
-<style>
-
-</style>
