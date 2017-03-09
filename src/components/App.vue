@@ -10,7 +10,7 @@
           el-col(:span = 18)
             el-input(placeholder='扫描条码')
           el-col(:span = 6)
-            building(:selected = "SelectedBuilding", :buildings = "buildings")
+            building(v-model = "SelectedBuilding", :buildings = "buildings")
       el-row#main
 </template>
 
