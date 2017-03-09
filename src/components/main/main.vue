@@ -1,6 +1,6 @@
 <template lang='pug'>
 el-row
-  el-col#container(:span = 20, :offset = 2)
+  el-col#container
     el-row#top(type = 'flex', align = 'middle')
       el-col#menu(:span = 11, :offset = 1)
         el-menu(theme='dark', mode='horizontal')

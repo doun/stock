@@ -9,3 +9,5 @@ dark = #324157
 .bordered
   border: 2px solid #eaeefb
   border-radius: 4px
+body
+  margin: 0
