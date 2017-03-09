@@ -1,11 +1,6 @@
-import Vue from 'vue';
-
-import {my} from './components'
-// register the plugin
+import {Vue,App } from './components'
 
 new Vue({
   el: '#app',
-  components: {
-    my
-  }
-});
+  render: h => h(App)
+})

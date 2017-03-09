@@ -1,15 +1,20 @@
 <template>
   <div>
-    hello {{msg}}
+    <building :buildings = "buildings"></building>
   </div>
 </template>
 
 <script lang='ts'>
-import Vue from 'vue'
-import {Component, Prop} from 'vue-property-decorator'
-@Component
-export default class My extends Vue{
-  @Prop()
-  msg: string
+import './imports.ts'
+
+@comp
+export default class App{
+  buildings = ['AL','LAL']
+  SelectedBuilding = 'AL'
 }
+
 </script>
+
+<style>
+
+</style>

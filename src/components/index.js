@@ -1,3 +1,8 @@
-import My from './building.vue'
+import Vue from 'vue'
+import ElementUI from 'element-ui'
+import App from './App.vue'
+import Building from './building.vue'
 
-export {My as my}
+Vue.use(ElementUI)
+Vue.component('building', Building)
+export{Vue, ElementUI, Building, App}
