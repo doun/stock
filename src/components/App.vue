@@ -1,6 +1,6 @@
 <template>
   <div>
-    <building :buildings = "buildings"></building>
+    <building :buildings = "buildings" :selected = "SelectedBuilding"></building>
   </div>
 </template>
 
