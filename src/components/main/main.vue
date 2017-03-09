@@ -16,7 +16,7 @@
       el-row#main
 </template>
 
-<script src = './main.ts'> </script>
+<script src = 'ts-loader!./main.ts'> </script>
 
 <style lang = 'stylus'> 
 dark = #324157

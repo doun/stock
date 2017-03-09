@@ -35,7 +35,12 @@ module.exports = {
       },
       {
         test: /\.js$/,
-        loader: 'babel-loader',
+        loader: 'ts-loader',
+        exclude: /node_modules/
+      },
+      {
+        test: /\.pug$/,
+        loader: 'pug-loader',
         exclude: /node_modules/
       },
       {
