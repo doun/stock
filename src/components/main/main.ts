@@ -7,4 +7,5 @@ export default class App extends Vue{
   SelectedBuilding = 'AL'
   UserName = ''
   GroupName = ''
+  Locations = []
 }

@@ -1,4 +1,4 @@
-import {App, Building} from './components'
+import {App, Building, InvList} from './components'
 import Vue from 'vue'
 import ElementUI from 'element-ui'
 

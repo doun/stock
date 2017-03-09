@@ -1,3 +1,8 @@
-<template src = './list.pug' lang = 'pug'> </template>
+<template lang='pug'>
+div hello world
+</template>
 
-<script lang='ts' src = './list.ts'></script>
+<script lang='ts'>
+import {List} from './inv.ts'
+export default List
+</script>
