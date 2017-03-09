@@ -1,5 +1,4 @@
-<template src = './main.pug' lang = 'pug'>
-</template>
+<template src = './main.pug' lang = 'pug'></template>
 
 <script lang='ts' src = './main.ts'> </script>
 
