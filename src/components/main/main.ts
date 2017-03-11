@@ -4,7 +4,9 @@ import {
   Prop as prop
 } from 'vue-property-decorator'
 
-@comp
+@comp({
+  name: 'app'
+})
 export default class App extends Vue{
   Buildings = ['AL','LAL']
   SelectedBuilding = 'AL'

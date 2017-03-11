@@ -1,8 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Hello from '@/components/Hello'
-import NewInventory from '@/components/inventory/new'
-import StoreList from '@/components/store/list'
+import {App, InvList as StoreList} from './components'
+
 declare const app
 Vue.use(Router)
 

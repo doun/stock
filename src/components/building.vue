@@ -11,7 +11,9 @@
     Prop as prop
   } from 'vue-property-decorator'
 
-  @comp
+  @comp({
+    name: 'building'
+  })
   export default class My extends Vue {
     @prop
     value: string
