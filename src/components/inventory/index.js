@@ -1,2 +1,2 @@
-import list from './list.vue'
-export {list}
+import InvList from './list.vue'
+export { InvList}

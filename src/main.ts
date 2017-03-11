@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import ElementUI from 'element-ui'
+import comps from './components'
 import {
   App,
   Building,
@@ -7,6 +8,7 @@ import {
 } from './components'
 
 Vue.use(ElementUI)
+Vue.use(comps)
 
 export let app = new Vue({
   el: '#app',

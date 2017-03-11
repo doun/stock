@@ -7,12 +7,14 @@ import {
 let listColumns = []
 let listDetailsColumns = []
 
-@comp
+@comp({
+})
 class List extends Vue {
 
 }
 
-@comp
+@comp({
+})
 class Editor extends Vue {
 
 }

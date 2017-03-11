@@ -12,7 +12,6 @@
   } from 'vue-property-decorator'
 
   @comp({
-    name: 'building'
   })
   export default class My extends Vue {
     @prop
