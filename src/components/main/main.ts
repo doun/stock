@@ -1,5 +1,8 @@
 import Vue from 'vue'
-import {Component as comp, Prop as prop} from 'vue-property-decorator'
+import {
+  Component as comp,
+  Prop as prop
+} from 'vue-property-decorator'
 
 @comp
 export default class App extends Vue{

@@ -1,6 +1,10 @@
-import {App, Building, InvList} from './components'
 import Vue from 'vue'
 import ElementUI from 'element-ui'
+import {
+  App,
+  Building,
+  InvList
+} from './components'
 
 Vue.use(ElementUI)
 
