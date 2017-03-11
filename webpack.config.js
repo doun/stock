@@ -9,16 +9,15 @@ module.exports = {
     filename: 'build.js'
   },
   module: {
-    rules: [
-      {
+    rules: [{
         test: /\.vue$/,
         loader: 'vue-loader',
         options: {
           loaders: {
-            ts:{
+            ts: {
               loader: 'ts-loader',
-              options:{
-                appendTsSuffixTo: [/\.vue$/] 
+              options: {
+                appendTsSuffixTo: [/\.vue$/]
               }
             }
           }
@@ -28,8 +27,8 @@ module.exports = {
       {
         test: /\.ts$/,
         loader: 'ts-loader',
-        options:{
-          appendTsSuffixTo: [/\.vue$/] 
+        options: {
+          appendTsSuffixTo: [/\.vue$/]
         },
         exclude: /node_modules/
       },
@@ -58,7 +57,8 @@ module.exports = {
   resolve: {
     alias: {
       'vue$': 'vue/dist/vue.esm.js',
-      assets: path.resolve(__dirname, './src/assets')
+      assets: path.resolve(__dirname, './src/assets'),
+      '@': path.resolve(__dirname, './src'),
     }
   },
   devServer: {

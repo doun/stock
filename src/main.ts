@@ -8,7 +8,10 @@ import {
 
 Vue.use(ElementUI)
 
-new Vue({
+export let app = new Vue({
   el: '#app',
   render: h => h(App)
 })
+
+declare const window
+window.app = app
