@@ -5,9 +5,5 @@ dark = #324157
 #main
   height: 200px
 #container
-  background-color: #EFF2F7
-.bordered
-  border: 2px solid #eaeefb
-  border-radius: 4px
 body
   margin: 0
