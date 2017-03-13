@@ -2,19 +2,20 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import {
   App,
-  InvList as StoreList
+  InvList,
+  Editor
 } from './components'
 
 declare const app
 Vue.use(Router)
 
 let routes = [{
-    path: '/',
-    component: StoreList,
+    path: '/:building',
+    component: InvList
   },
   {
-    path: '/store/:building',
-    component: StoreList,
+    path: '/new/:building',
+    component: InvList,
   },
 ]
 

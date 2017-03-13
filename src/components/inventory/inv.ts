@@ -43,22 +43,43 @@ const inventoryDetail = {
 @comp({})
 class List extends Vue {
   cols = inventory.cols
-  entries = inventory.entries
   @prop
   building: string
+  get entries(){
+    return inventory.entries
+  }
 }
 
 @comp
 class Detail extends Vue {
   cols = inventoryDetail.cols
-  entries = inventoryDetail.entries
   @prop
   inventory: string
+  get entries(){
+    return inventoryDetail.entries
+  }
 }
 
 @comp({})
 class Editor extends Vue {
-
+  @prop
+  bar_code: string
+  product_id: number
+  product :{
+    name:''
+  }
+  batch_id: number
+  batch:{
+    batch_number: ''
+    expiry_date: ''
+  }
+  inventory_id: number
+  location: string
+  @prop
+  building: string
+  get locations(){
+    return ['AL206','AL206试剂柜']
+  }
 }
 
 export {
