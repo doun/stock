@@ -64,13 +64,16 @@ class Detail extends Vue {
 class Editor extends Vue {
   @prop
   bar_code: string
+  count: number
   product_id: number
+  expiry_date: string
   product :{
+    number: ''
     name:''
   }
   batch_id: number
   batch:{
-    batch_number: ''
+    number: ''
     expiry_date: ''
   }
   inventory_id: number
