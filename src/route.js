@@ -7,14 +7,14 @@ import {
 } from './components'
 
 Vue.use(Router)
-function curBuilding(){
-  debugger
-  return {
-    building: app.SelectedBuilding
-  }
+
+function curBuilding() {
+  if (data.SelectedBuilding)
+    return {
+      building: data.SelectedBuilding
+    }
 }
-let routes = [
-  {
+let routes = [{
     path: '/list',
     component: InvList,
     props: curBuilding
