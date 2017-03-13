@@ -3,10 +3,10 @@ el-row
   el-col#container
     el-row#top(type = 'flex', align = 'middle')
       el-col#menu(:span = 11, :offset = 1)
-        el-menu(theme='dark', mode='horizontal')
+        el-menu(theme='dark', mode='horizontal', router)
           el-menu-item(index = '/') 库存
           el-menu-item(index = '123') 入库
-          el-menu-item(index = '123') 盘点 
+          el-menu-item(index = '124') 盘点 
       el-col#actions.is-align-middle(:span = 8, :offset = 4, :gutter = 10)
         el-row(:gutter = 10)
           el-col(:span = 16)

@@ -9,7 +9,7 @@ import {
 Vue.use(Router)
 
 let routes = [{
-    path: '/:building',
+    path: '/list',
     component: InvList
   },
   {
@@ -18,15 +18,6 @@ let routes = [{
   },
 ]
 
-for (let r of routes) {
-  Object.assign(r, {
-    props: function (route) {
-      return {
-        building: app.cur_building
-      }
-    }
-  })
-}
 export default new Router({
   routes
 })

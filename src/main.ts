@@ -12,5 +12,8 @@ Vue.use(comps)
 export let app = new Vue({
   el: '#app',
   router: route,
-  render: h => h(App)
+  template: '<app ref = "main"/>',
+  components: {App}
 })
+declare const window
+window.app = app.$refs.main
