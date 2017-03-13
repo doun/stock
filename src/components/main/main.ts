@@ -3,7 +3,7 @@ import {
   Component as comp,
   Prop as prop
 } from 'vue-property-decorator'
-
+import route from './route'
 @comp({
   name: 'app'
 })
