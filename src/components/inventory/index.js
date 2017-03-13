@@ -1,2 +1,5 @@
 import InvList from './list.vue'
-export { InvList}
+import Detail from './detail.vue'
+
+
+export { InvList, Detail}

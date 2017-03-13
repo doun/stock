@@ -1,3 +1,3 @@
 <template lang='pug'>
-  el-table(a=9)
+  el-table
 </template>

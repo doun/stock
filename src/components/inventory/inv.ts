@@ -29,21 +29,31 @@ const inventory = {
     }
   ]
 }
-const detailsColumns = {
-  id: '序号',
-  batch_number: '批次',
-  quantity: '数量',
-  expiry_date: '有效期',
-  status: '状态',
+const inventoryDetail = {
+  cols: {
+    id: '序号',
+    batch_number: '批次',
+    quantity: '数量',
+    expiry_date: '有效期',
+    status: '状态',
+  },
+  entries: []
 }
 
-@comp({
-})
+@comp({})
 class List extends Vue {
   cols = inventory.cols
   entries = inventory.entries
   @prop
   building: string
+}
+
+@comp
+class Detail extends Vue {
+  cols = inventoryDetail.cols
+  entries = inventoryDetail.entries
+  @prop
+  inventory: string
 }
 
 @comp({})
@@ -53,5 +63,6 @@ class Editor extends Vue {
 
 export {
   List,
-  Editor
+  Editor,
+  Detail
 }
