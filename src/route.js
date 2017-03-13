@@ -11,8 +11,7 @@ Vue.use(Router)
 let routes = [
   {
     path: '/list',
-    component: InvList,
-    props: curBuilding
+    component: InvList
   },
   {
     path: '/',
