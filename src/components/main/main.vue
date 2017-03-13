@@ -12,7 +12,7 @@ el-row
           el-col(:span = 16)
             el-input(placeholder='扫描条码')
           el-col(:span = 7)
-            building(v-model = "SelectedBuilding", :buildings = "Buildings")
+            building(v-model = "Building", :buildings = "Buildings")
     el-row
       el-col(:span = 20,:offset = 2, :push = 2)#main
         router-view

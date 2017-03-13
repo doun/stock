@@ -8,12 +8,6 @@ import {
 
 Vue.use(Router)
 
-function curBuilding() {
-  if (data.SelectedBuilding)
-    return {
-      building: data.SelectedBuilding
-    }
-}
 let routes = [{
     path: '/list',
     component: InvList
@@ -31,9 +25,9 @@ let routes = [{
 for (let r of routes) {
   Object.assign(r, {
     props: function (route) {
-      if( app.SelectedBuilding)
+      if( data.SelectedBuilding)
         return {
-          building: app.SelectedBuilding 
+          building: data.SelectedBuilding 
         }
     }
   })

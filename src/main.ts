@@ -21,6 +21,6 @@ window.data = data
 export let app = new Vue({
   el: '#app',
   router: route,
-  template: '<app/>',
+  template: '<app building = "AL"/>',
   components: {App}
 })

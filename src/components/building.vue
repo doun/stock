@@ -14,7 +14,7 @@
   @comp
   export default class My extends Vue {
     @prop
-    value 
+    value:string 
 
     @prop
     Buildings: Array < string >

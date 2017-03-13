@@ -8,7 +8,7 @@ import {
 })
 export default class App extends Vue{
   @prop
-  SelectedBuilding: string
+  Building: string
   @prop
   UserName: string
   @prop
