@@ -13,11 +13,20 @@ el-row
             el-input(placeholder='扫描条码')
           el-col(:span = 7)
             building(v-model = "SelectedBuilding", :buildings = "Buildings")
-    el-row#main
-      inv-list
+    el-row
+      el-col(:span = 20,:offset = 2, :push = 2)#main
+        inv-list
 </template>
 
 <script lang='ts' src = './main.ts'> </script>
 
-<style lang='stylus' src="assets/main.stylus"> 
+<style lang='stylus'> 
+dark = #324157
+#top
+  background-color: dark 
+  margin-bottom: 5px
+#main
+#container
+body
+  margin: 0
 </style>
