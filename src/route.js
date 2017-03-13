@@ -7,10 +7,21 @@ import {
 } from './components'
 
 Vue.use(Router)
-
-let routes = [{
+function curBuilding(){
+  debugger
+  return {
+    building: app.SelectedBuilding
+  }
+}
+let routes = [
+  {
     path: '/list',
-    component: InvList
+    component: InvList,
+    props: curBuilding
+  },
+  {
+    path: '/',
+    redirect: '/list'
   },
   {
     path: '/new/:building',
@@ -18,6 +29,16 @@ let routes = [{
   },
 ]
 
+//for (let r of routes) {
+//  Object.assign(r, {
+//    props: function (route) {
+//      debugger
+//      return {
+//        building: app.SelectedBuilding 
+//      }
+//    }
+//  })
+//}
 export default new Router({
   routes
 })

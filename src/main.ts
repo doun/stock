@@ -12,7 +12,7 @@ Vue.use(comps)
 export let app = new Vue({
   el: '#app',
   router: route,
-  template: '<app ref = "main"/>',
+  template: '<app ref = "main" SelectedBuilding = "AL"/>',
   components: {App}
 })
 declare const window

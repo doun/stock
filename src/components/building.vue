@@ -19,7 +19,7 @@
     @prop
     Buildings: Array < string >
 
-      selected: string = this.value
+    selected: string = this.value
 
     updateValue() {
       this.$emit('input', this.selected)
