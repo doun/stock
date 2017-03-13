@@ -11,16 +11,14 @@
     Prop as prop
   } from 'vue-property-decorator'
 
-  @comp({
-  })
+  @comp
   export default class My extends Vue {
     @prop
     value: string
     @prop
     Buildings: Array < string >
 
-    selected: string = this.value
-
+    selected:string = this.value 
     updateValue() {
       this.$emit('input', this.selected)
     }
