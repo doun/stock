@@ -15,7 +15,7 @@ el-row
             building(v-model = "SelectedBuilding", :buildings = "Buildings")
     el-row
       el-col(:span = 20,:offset = 2, :push = 2)#main
-        inv-list
+        router-view
 </template>
 
 <script lang='ts' src = './main.ts'> </script>

@@ -6,7 +6,6 @@ import {
   Editor
 } from './components'
 
-declare const app
 Vue.use(Router)
 
 let routes = [{

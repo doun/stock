@@ -3,17 +3,14 @@ import ElementUI from 'element-ui'
 import comps from './components'
 import {
   App,
-  Building,
-  InvList
 } from './components'
+import route from './route'
 
 Vue.use(ElementUI)
 Vue.use(comps)
 
 export let app = new Vue({
   el: '#app',
+  router: route,
   render: h => h(App)
 })
-
-declare const window
-window.app = app
