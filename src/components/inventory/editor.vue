@@ -1,5 +1,6 @@
 <template lang="pug">
-h1 入库登记
+div
+  h1 入库登记
   el-row(:gutter='20')
     el-col(:span = 20)
       el-form(label-width = '80px')
@@ -9,27 +10,33 @@ h1 入库登记
           el-input-number(v-model = 'count', :min = 1)
         el-form-item(label = '物项')
           el-autocomplete(v-model='product.number', icon='edit', placeholder='十字码')
+          el-button(type='text',@click='showDlg') 添加
         el-form-item(label = '批次')
-          el-input(icon='edit', v-model = 'batch.number', placeholder='批号')
+          el-autocomplete(icon='edit', v-model = 'batch.number', placeholder='批号')
+          el-button(type = 'text') 添加
         el-form-item(label = '有效期')
           el-date-picker(v-model = 'expiry_date')
         el-form-item
           el-button(type='primary') 提交
-  //    el-dialog(ref='editor', modal, v-model='dlgVisiable')
-  //      el-form
-  //        input(v-show='false',v-model='newItem.product.id')
-  //        h1 编辑物项
-  //        el-form-item(label='名称')
-  //          el-input(v-modal='newItem.product.name')
-  //        el-form-item(label='十字码')
-  //          el-input(v-model='newItem.product.number')
-  //        el-form-item(label='数量单位')
-  //          el-input(v-model='newItem.product.unit')
-  //        el-form-item(label='规格')
-  //          el-input(v-model='newItem.product.spec')
-  //        el-button(@click="showDlg(false)") 取消
+      el-dialog(ref='prod_dialog', modal)
+        el-form
+          el-form-item(label='名称')
+            el-input(v-modal='product.name')
+          el-form-item(label='十字码')
+            el-input(v-model='product.number')
+          el-form-item(label='数量单位')
+            el-input(v-model='product.unit')
+          el-form-item(label='规格')
+            el-input(v-model='product.spec')
+          el-button() 取消
 </template>
 <script lang='ts'>
 import {Editor} from './inv.ts'
 export default Editor 
 </script>
+
+<style scoped>
+button{
+  margin: 10px;
+}
+</style>

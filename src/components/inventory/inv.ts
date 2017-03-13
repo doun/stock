@@ -69,7 +69,10 @@ class Editor extends Vue {
   product_id: number = 0
   expiry_date: string = ''
   product: any = {
+    id: '',
     number: '',
+    spec: '',
+    unit: '',
     name:''
   }
   batch_id: number
@@ -83,6 +86,10 @@ class Editor extends Vue {
   building: string
   get locations(){
     return ['AL206','AL206试剂柜']
+  }
+  showDlg(product = false, batch = false){
+    let  dlg:any = this.$refs.prod_dialog
+    dlg.open()
   }
 }
 
