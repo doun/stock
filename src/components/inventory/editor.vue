@@ -1,9 +1,10 @@
 <template lang="pug">
+h1 入库登记
   el-row(:gutter='20')
     el-col(:span = 20)
-      el-form(label-width = '80px', v-model = 'this')
+      el-form(label-width = '80px')
         el-form-item(label = '条码')
-          el-input(v-model = 'bar_code', @blur = "checkBarCode")
+          el-input(v-model = 'bar_code' )
         el-form-item(label = '数量')
           el-input-number(v-model = 'count', :min = 1)
         el-form-item(label = '物项')
