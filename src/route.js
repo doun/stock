@@ -17,8 +17,8 @@ let routes = [{
     redirect: '/list'
   },
   {
-    path: '/new/:building',
-    component: InvList,
+    path: '/new',
+    component: Editor,
   },
 ]
 
