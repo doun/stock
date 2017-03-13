@@ -8,8 +8,13 @@ import {
 
 Vue.use(Router)
 
-let routes = [
-  {
+function curBuilding() {
+  if (data.SelectedBuilding)
+    return {
+      building: data.SelectedBuilding
+    }
+}
+let routes = [{
     path: '/list',
     component: InvList
   },
