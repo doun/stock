@@ -1,10 +1,5 @@
 import Vue from 'vue'
 
-import {
-  Component as comp,
-  Prop as prop
-} from 'vue-property-decorator'
-import * as m from '../../data'
 
 declare const data 
 
@@ -67,9 +62,6 @@ class Detail extends Vue {
 
 @comp({})
 class Editor extends Vue {
-  constructor(){
-    super()
-  }
   count: number = 1
   @prop
   bar_code: string

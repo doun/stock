@@ -4,24 +4,18 @@
   </el-select>
 </template>
 
-<script lang='ts'>
-  import Vue from 'vue'
-  import {
-    Component as comp,
-    Prop as prop
-  } from 'vue-property-decorator'
-
-  @comp
-  export default class My extends Vue {
-    @prop
-    value:string 
-
-    @prop
-    Buildings: Array < string >
-
-    selected:string = "" + this.value
-    updateValue() {
-      this.$emit('input', this.selected)
+<script>
+  export default {
+    props: ['value', 'Buildings'],
+    data: function () {
+      return {
+        selected: ''
+      }
+    },
+    methods:{
+      updateValue: function(){
+        this.$emit('input', this.selected)
+      }
     }
   }
 </script>

@@ -20,7 +20,8 @@ el-row
 
 <script>
   export default {
-    data(){
+    props: ['Building'],
+    data: function(){
       return {
         Buildings: ['AL','LAL'],
         SelectedBuilding: 'AL',
