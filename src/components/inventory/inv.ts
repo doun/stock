@@ -67,9 +67,6 @@ class Detail extends Vue {
 
 @comp({})
 class Editor extends Vue {
-  constructor(){
-    super()
-  }
   count: number = 1
   @prop
   bar_code: string

@@ -42,9 +42,43 @@ div
           el-button() 取消
           el-button() 提交
 </template>
-<script lang='ts'>
-import {Editor} from './inv.ts'
-export default Editor 
+<script>
+export default {
+  data: function(){
+    return {
+      count: 0,
+      bar_code: '',
+      loc: {
+        id: 0,
+        name: '',
+        building: ''
+      },
+      product: {
+        id: 0,
+        name: ''
+      },
+      line:{
+        product_id: 0,
+        location_id: 0,
+        max: 0,
+        min: 0,
+        current: 0
+      },
+      batch: {
+        id: 0,
+        number: '',
+        expiry_date: '',
+        product_id: 0
+      },
+      item: {
+        product_id: 0,
+        location_id: 0,
+        batch_id: 0,
+        expiry_date: ''
+      }
+    }
+  }
+}
 </script>
 
 <style scoped>

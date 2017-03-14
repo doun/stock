@@ -1,4 +1,4 @@
-import { Main as App } from './main'
+import { Main as App } from './main.vue'
 import Building from './building.vue'
 import { InvList, Detail, Editor } from './inventory'
 import 'element-ui/lib/theme-default/index.css'
