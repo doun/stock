@@ -89,6 +89,7 @@ class Editor extends Vue {
   }
   showDlg(product = false, batch = false){
     let  dlg:any = this.$refs.prod_dialog
+    debugger
     dlg.open()
   }
 }

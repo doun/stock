@@ -21,7 +21,7 @@ div
       el-dialog(ref='prod_dialog', modal)
         el-form
           el-form-item(label='名称')
-            el-input(v-modal='product.name')
+            el-input(v-model='product.name')
           el-form-item(label='十字码')
             el-input(v-model='product.number')
           el-form-item(label='数量单位')
