@@ -34,7 +34,7 @@ module.exports = {
       },
       {
         test: /\.js$/,
-        loader: 'ts-loader',
+        loader: 'babel-loader',
         exclude: /node_modules/
       },
       {

@@ -18,7 +18,19 @@ el-row
         router-view
 </template>
 
-<script lang='ts' src = './main.ts'> </script>
+<script>
+  export default {
+    data(){
+      return {
+        Buildings: ['AL','LAL'],
+        SelectedBuilding: 'AL',
+        UserName: '',
+        GroupName: '',
+        Locations: []
+      }
+  }
+}
+</script>
 
 <style lang='stylus'> 
 dark = #324157
