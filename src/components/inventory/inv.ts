@@ -60,7 +60,7 @@ class Detail extends Vue {
   }
 }
 
-interface Item{
+class Item{
   count: number
   product_id: number
   location_id: number
@@ -70,8 +70,20 @@ interface Item{
 
 @comp({})
 class Editor extends Vue {
+  constructor(){
+    super()
+  }
   @prop
-  item: Item
+  bar_code: string
+
+  item:Item = new Item() 
+ // {
+ // count: 1,
+ // product_id: 1,
+ // location_id: 1,
+ // batch_id: 1,
+ // expiry_date: ''
+ // } 
   product: any = {
     id: '',
     number: '',

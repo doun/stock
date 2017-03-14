@@ -9,12 +9,12 @@ div
         el-form-item(label = '数量')
           el-input-number(v-model = 'item.count', :min = 1)
         el-form-item(label = '位置')
-          el-autocomplete(v-model = 'item.location_id')
+          el-autocomplete(v-model.number = 'item.location_id')
         el-form-item(label = '物项')
-          el-autocomplete(v-model='item.product_id', icon='edit', placeholder='十字码')
+          el-autocomplete(v-model.number ='item.product_id', icon='edit', placeholder='十字码')
           el-button(type='text',@click='showDlg') 添加
         el-form-item(label = '批次')
-          el-autocomplete(icon='edit', v-model = 'item.batch_id', placeholder='批号')
+          el-autocomplete(icon='edit', v-model.number = 'item.batch_id', placeholder='批号')
           el-button(type = 'text') 添加
         el-form-item(label = '有效期')
           el-date-picker(v-model = 'item.expiry_date')

@@ -4,7 +4,6 @@ import comps from './components'
 import {
   App,
 } from './components'
-
 import route from './route'
 
 Vue.use(ElementUI)
