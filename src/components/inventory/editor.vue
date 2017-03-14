@@ -13,10 +13,10 @@ div
           el-button(type='text',@click='showDlg("loc")', size = 'small') 添加
         el-form-item(label = '物项')
           el-autocomplete(v-model='product', icon='edit', placeholder='十字码')
-          el-button(type='text',@click='showDlg("loc")', size = 'small') 添加
+          el-button(type='text',@click='showDlg("prod")', size = 'small') 添加
         el-form-item(label = '批次')
           el-autocomplete(icon='edit', v-model = 'batch', placeholder='批号')
-          el-button(type = 'text', @click = 'showDlg("loc")', size = 'small') 添加
+          el-button(type = 'text', @click = 'showDlg("batch")', size = 'small') 添加
         el-form-item(label = '有效期')
           el-date-picker(v-model = 'item.expiry_date')
         el-form-item
