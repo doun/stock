@@ -1,6 +1,10 @@
 <template>
-  <div>hello there</div>
+  <div>hello {{msg}}</div>
 </template>
 <script>
-  export default {}
+  export default {
+    props:[
+      'msg'
+    ]
+  }
 </script>

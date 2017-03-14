@@ -3,6 +3,7 @@ import ElementUI from 'element-ui'
 import comps from './components'
 import {
   App,
+  Hello
 } from './components'
 import route from './route'
 
@@ -19,7 +20,6 @@ window.data = data
 
 export let app = new Vue({
   el: '#app',
-  router: route,
-  template: '<app building = "AL"/>',
-  components: {App}
+  template: '<hello msg = "ddd"/>',
+  components: {Hello}
 })
