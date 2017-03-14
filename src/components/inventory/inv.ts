@@ -4,7 +4,10 @@ import {
   Component as comp,
   Prop as prop
 } from 'vue-property-decorator'
-import * as m from '../../models.ts'
+import * as m from '../../data'
+
+declare const data 
+
 const inventory = {
   cols: {
     number: '十字码',
@@ -86,7 +89,7 @@ class Editor extends Vue {
     return ['AL206','AL206试剂柜']
   }
   getBuildings(q:string, cb: any){
-    this.$http.get()
+    let rst = data.getBuildings()
     cb(rst)
   }
   showLocDlg(){

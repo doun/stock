@@ -1,3 +1,5 @@
+import {Component as comp, Prop as prop} from 'vue-property-decorator'
+import Vue from 'vue'
 class Item{
   line_id: number
   batch_id: number
@@ -28,6 +30,15 @@ class ProductLine{
   min: number
 }
 
+class AppData extends Vue{
+  SelectedBuilding = "AL"
+  Buildings = []
+  @prop
+  UserName: string
+  @prop
+  GroupNames: string 
+}
+
 export{
-  Item, Batch, Product, Location, ProductLine
+  Item, Batch, Product, Location, ProductLine, AppData
 }
