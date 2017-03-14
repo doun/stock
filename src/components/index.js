@@ -1,6 +1,6 @@
 import { Main as App } from './main.vue'
 import Building from './building.vue'
-import { InvList, Detail, Editor } from './inventory'
+import { InvList, Detail, Editor, Checker } from './inventory'
 import 'element-ui/lib/theme-default/index.css'
 
 let installed = false
@@ -10,6 +10,7 @@ export default function install(Vue, options ={}) {
     Vue.component('InvList', InvList)
     Vue.component('detail', Detail)
     Vue.component('editor', Editor)
+    Vue.component('checker', Checker)
   }
   installed = true;
 }
@@ -19,5 +20,6 @@ export {
   Building,
   InvList,
   Detail,
-  Editor
+  Editor,
+  Checker
 }

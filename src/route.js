@@ -3,7 +3,8 @@ import Router from 'vue-router'
 import {
   App,
   InvList,
-  Editor
+  Editor as EditorView,
+  Checker as CheckView
 } from './components'
 
 Vue.use(Router)
@@ -18,8 +19,13 @@ let routes = [{
   },
   {
     path: '/new',
-    component: Editor,
+    component: EditorView,
   },
+  {
+    path: '/check/:mode',
+    component: CheckView,
+    props: true
+  }
 ]
 
 for (let r of routes) {
