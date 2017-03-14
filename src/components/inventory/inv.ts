@@ -60,14 +60,18 @@ class Detail extends Vue {
   }
 }
 
+interface Item{
+  count: number
+  product_id: number
+  location_id: number
+  batch_id: number
+  expiry_date: string
+}
+
 @comp({})
 class Editor extends Vue {
   @prop
-  bar_code: string
-
-  count: number = 0
-  product_id: number = 0
-  expiry_date: string = ''
+  item: Item
   product: any = {
     id: '',
     number: '',

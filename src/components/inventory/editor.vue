@@ -3,19 +3,21 @@ div
   h1 入库登记
   el-row(:gutter='20')
     el-col(:span = 20)
-      el-form(label-width = '80px')
+      el-form(label-width = '80px', v-model = 'item')
         el-form-item(label = '条码')
           el-input(v-model = 'bar_code' )
         el-form-item(label = '数量')
-          el-input-number(v-model = 'count', :min = 1)
+          el-input-number(v-model = 'item.count', :min = 1)
+        el-form-item(label = '位置')
+          el-autocomplete(v-model = 'item.location_id')
         el-form-item(label = '物项')
-          el-autocomplete(v-model='product.number', icon='edit', placeholder='十字码')
+          el-autocomplete(v-model='item.product_id', icon='edit', placeholder='十字码')
           el-button(type='text',@click='showDlg') 添加
         el-form-item(label = '批次')
-          el-autocomplete(icon='edit', v-model = 'batch.number', placeholder='批号')
+          el-autocomplete(icon='edit', v-model = 'item.batch_id', placeholder='批号')
           el-button(type = 'text') 添加
         el-form-item(label = '有效期')
-          el-date-picker(v-model = 'expiry_date')
+          el-date-picker(v-model = 'item.expiry_date')
         el-form-item
           el-button(type='primary') 提交
       el-dialog(ref='prod_dialog', modal)
