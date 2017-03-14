@@ -75,7 +75,11 @@ class Editor extends Vue {
   bar_code: string
 
   item:m.Item = new m.Item() 
-  loc: m.Location = new m.Location()
+  loc:m.Location = {
+    id: 0,
+    name: '',
+    building: ''
+  }
   prod: m.Product = new m.Product()
   prod_line: m.ProductLine = new m.ProductLine()
 
@@ -94,6 +98,10 @@ class Editor extends Vue {
   }
   showLocDlg(){
     (this.$refs.locDlg as any).open()
+  }
+  handleSelect(item:any){
+    debugger
+    this.loc.building = item.text
   }
   mounted(){
    // this.locDlg = this.$refs.locDlg

@@ -1,5 +1,6 @@
 import {Component as comp, Prop as prop} from 'vue-property-decorator'
 import Vue from 'vue'
+import resource from 'vue-resource'
 class Item{
   line_id: number
   batch_id: number
@@ -17,10 +18,13 @@ class Product {
   name: string
 }
 
-class Location {
+interface ILocation {
   id: number
   name: string
   building: string
+}
+class Location implements ILocation{
+
 }
 
 class ProductLine{

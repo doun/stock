@@ -3,8 +3,14 @@ import {
 } from './models.ts'
 
 class AppData extends Base{
-  getBuildings(){
-
+  //TODO
+    getBuildings(){
+    return [
+      {
+        value: 'AL',
+        text: 'asdf'
+      }
+    ]
   }
 }
 

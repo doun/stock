@@ -22,11 +22,11 @@ div
         el-form-item
           el-button(type='primary') 提交
       el-dialog(ref = 'locDlg', title = '编辑存放点')
-        el-form(label-position = 'right', label-width = '60px')
+        el-form(label-position = 'right', label-width = '60px', :model = 'loc')
           el-form-item(label = '名称')
-            el-input(m-model = 'loc.name')
+            el-input(v-model = 'loc.name')
           el-form-item(label = '位置')
-            el-autocomplete(:fetch-suggestions = 'getBuildings')
+            el-autocomplete(v-model = 'loc.building', @select  = 'handleSelect', :fetch-suggestions = 'getBuildings')
 
       el-dialog(ref='prodDlg', title = '编辑物项' )
         el-form
