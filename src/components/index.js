@@ -4,7 +4,7 @@ import { InvList, Detail, Editor } from './inventory'
 import 'element-ui/lib/theme-default/index.css'
 import Hello from './hello.vue'
 let installed = false
-export default function install(Vue) {
+export default function install(Vue, options ={}) {
   if (!installed) {
     Vue.component('building', Building)
     Vue.component('InvList', InvList)
