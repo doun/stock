@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import ElementUI from 'element-ui'
 import comps from './components'
+import * as m from './data'
 import {
   App,
 } from './components'
@@ -9,12 +10,8 @@ import route from './route'
 Vue.use(ElementUI)
 Vue.use(comps)
 
-class AppData extends Vue{
-  SelectedBuilding = "AL" 
-}
-
 declare const window
-let data = new AppData()
+let data = new m.AppData()
 window.data = data
 
 export let app = new Vue({

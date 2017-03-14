@@ -1,8 +1,12 @@
 import Vue from 'vue'
+
 import {
   Component as comp,
   Prop as prop
 } from 'vue-property-decorator'
+import * as m from '../../data'
+
+declare const data 
 
 const inventory = {
   cols: {
@@ -29,6 +33,7 @@ const inventory = {
     }
   ]
 }
+
 const inventoryDetail = {
   cols: {
     id: '序号',
@@ -60,53 +65,49 @@ class Detail extends Vue {
   }
 }
 
-class Item{
-  count: number
-  product_id: number
-  location_id: number
-  batch_id: number
-  expiry_date: string
-}
-
 @comp({})
 class Editor extends Vue {
   constructor(){
     super()
   }
+  count: number = 1
   @prop
   bar_code: string
 
-  item:Item = new Item() 
- // {
- // count: 1,
- // product_id: 1,
- // location_id: 1,
- // batch_id: 1,
- // expiry_date: ''
- // } 
-  product: any = {
-    id: '',
-    number: '',
-    spec: '',
-    unit: '',
-    name:''
+  item:m.Item = new m.Item() 
+  loc:m.Location = {
+    id: 0,
+    name: '',
+    building: ''
   }
-  batch_id: number
-  batch: any = {
-    number: '',
-    expiry_date: ''
-  }
-  inventory_id: number
-  location: string
+  prod: m.Product = new m.Product()
+  prod_line: m.ProductLine = new m.ProductLine()
+
+  locDlg : any
+  prodDlg: any
+  lineDlg: any
+  batchDlg: any
   @prop
   building: string
   get locations(){
     return ['AL206','AL206试剂柜']
   }
-  showDlg(product = false, batch = false){
-    let  dlg:any = this.$refs.prod_dialog
+  getBuildings(q:string, cb: any){
+    let rst = data.getBuildings()
+    cb(rst)
+  }
+  showLocDlg(){
+    (this.$refs.locDlg as any).open()
+  }
+  handleSelect(item:any){
     debugger
-    dlg.open()
+    this.loc.building = item.text
+  }
+  mounted(){
+   // this.locDlg = this.$refs.locDlg
+   // this.prodDlg = this.$refs.prodDlg
+   // this.batchDlg = this.$refs.batchDlg
+   // this.locDlg = this.$refs.lineDlg
   }
 }
 
