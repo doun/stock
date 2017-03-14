@@ -2,10 +2,10 @@
 div
   h1 入库登记
   el-row(:gutter='20')
-    el-col(:span = 20)
+    el-col(:span = 10)
       el-form(label-width = '80px', v-model = 'item')
         el-form-item(label = '条码')
-          el-input(v-model = 'bar_code' )
+          el-input(v-model = 'bar_code',placeholder = '扫描条码' )
         el-form-item(label = '数量')
           el-input-number(v-model = 'count', :min = 1)
         el-form-item(label = '位置')
@@ -19,8 +19,11 @@ div
           el-button(type = 'text', @click = 'showDlg("batch")', size = 'small') 添加
         el-form-item(label = '有效期')
           el-date-picker(v-model = 'item.expiry_date')
-        el-form-item
-          el-button(type='primary') 提交
+        el-form-item(label = '打印条码', label-width = '240px')
+          el-switch(v-model = 'auto_print')
+          el-button(type='primary') 确认 
+      el-row(type = 'flex', align = 'middle',justify = 'end')
+        el-col(:span = 4)
   my-dialog(ref='dlg')
 </template>
 <script>
@@ -33,6 +36,7 @@ export default {
     return {
       count: 0,
       bar_code: '',
+      auto_print: true,
       location: '',
       product: '',
       batch: '',
@@ -54,6 +58,6 @@ export default {
 
 <style scoped>
 button{
-  margin: 10px;
+  margin-left: 10px;
 }
 </style>
