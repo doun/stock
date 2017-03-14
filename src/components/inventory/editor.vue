@@ -10,7 +10,7 @@ div
           el-input-number(v-model = 'count', :min = 1)
         el-form-item(label = '位置')
           el-autocomplete(v-model.number = 'item.location_id', placeholder = '存放位置', icon = 'edit')
-          el-button(type='text',@click='addLocation', size = 'small') 添加
+          el-button(type='text',@click='showLocDlg', size = 'small') 添加
         el-form-item(label = '物项')
           el-autocomplete(v-model.number ='item.product_id', icon='edit', placeholder='十字码')
           el-button(type='text',@click='addProd', size = 'small') 添加
@@ -21,7 +21,14 @@ div
           el-date-picker(v-model = 'item.expiry_date')
         el-form-item
           el-button(type='primary') 提交
-      el-dialog(ref='prod_dialog', title = '编辑物项' )
+      el-dialog(ref = 'locDlg', title = '编辑存放点')
+        el-form(label-position = 'right', label-width = '60px')
+          el-form-item(label = '名称')
+            el-input(m-model = 'loc.name')
+          el-form-item(label = '位置')
+            el-autocomplete(:fetch-suggestions = 'getBuildings')
+
+      el-dialog(ref='prodDlg', title = '编辑物项' )
         el-form
           el-form-item(label='名称')
             el-input(v-model='prod.name')
@@ -34,7 +41,6 @@ div
         span(slot='footer')
           el-button() 取消
           el-button() 提交
-
 </template>
 <script lang='ts'>
 import {Editor} from './inv.ts'

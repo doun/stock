@@ -9,10 +9,7 @@ import {
 export default class App extends Vue{
   @prop
   Building: string
-  @prop
-  UserName: string
-  @prop
-  GroupNames: string
+ 
   get Locations(){
     return []
   }

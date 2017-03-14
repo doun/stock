@@ -76,13 +76,27 @@ class Editor extends Vue {
   prod: m.Product = new m.Product()
   prod_line: m.ProductLine = new m.ProductLine()
 
+  locDlg : any
+  prodDlg: any
+  lineDlg: any
+  batchDlg: any
   @prop
   building: string
   get locations(){
     return ['AL206','AL206试剂柜']
   }
+  getBuildings(q:string, cb: any){
+    this.$http.get()
+    cb(rst)
+  }
+  showLocDlg(){
+    (this.$refs.locDlg as any).open()
+  }
   mounted(){
-
+   // this.locDlg = this.$refs.locDlg
+   // this.prodDlg = this.$refs.prodDlg
+   // this.batchDlg = this.$refs.batchDlg
+   // this.locDlg = this.$refs.lineDlg
   }
 }
 

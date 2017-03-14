@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import ElementUI from 'element-ui'
 import comps from './components'
+import {Component as comp, Prop as prop} from 'vue-property-decorator'
 import {
   App,
 } from './components'
@@ -10,7 +11,12 @@ Vue.use(ElementUI)
 Vue.use(comps)
 
 class AppData extends Vue{
-  SelectedBuilding = "AL" 
+  SelectedBuilding = "AL"
+  Buildings = []
+  @prop
+  UserName: string
+  @prop
+  GroupNames: string 
 }
 
 declare const window
