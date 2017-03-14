@@ -7,7 +7,5 @@ div
         a 开封
         a 使用登记
 </template>
-<script lang='ts'>
-import {Detail} from './inv.ts'
-export default Detail
+<script>
 </script>

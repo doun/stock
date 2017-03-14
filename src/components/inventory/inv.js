@@ -1,10 +1,5 @@
 import Vue from 'vue'
 
-import {
-  Component as comp,
-  Prop as prop
-} from 'vue-property-decorator'
-import * as m from '../../data'
 
 declare const data 
 

@@ -1,22 +1,20 @@
 import Vue from 'vue'
 import ElementUI from 'element-ui'
 import comps from './components'
-import * as m from './data'
-import {
-  App,
-} from './components'
+import App from './components/main.vue'
 import route from './route'
 
 Vue.use(ElementUI)
 Vue.use(comps)
-
-declare const window
-let data = new m.AppData()
-window.data = data
-
-export let app = new Vue({
+window.data = new Vue({
+  methods:{
+    getBuildings(){
+    }
+  }
+})
+new Vue({
   el: '#app',
   router: route,
-  template: '<app building = "AL"/>',
+  template: '<App building = "AL"/>',
   components: {App}
 })
