@@ -1,9 +1,10 @@
 import Vue from 'vue'
+
 import {
   Component as comp,
   Prop as prop
 } from 'vue-property-decorator'
-
+import * as m from '../../models.ts'
 const inventory = {
   cols: {
     number: '十字码',
@@ -29,6 +30,7 @@ const inventory = {
     }
   ]
 }
+
 const inventoryDetail = {
   cols: {
     id: '序号',
@@ -60,53 +62,27 @@ class Detail extends Vue {
   }
 }
 
-class Item{
-  count: number
-  product_id: number
-  location_id: number
-  batch_id: number
-  expiry_date: string
-}
-
 @comp({})
 class Editor extends Vue {
   constructor(){
     super()
   }
+  count: number = 1
   @prop
   bar_code: string
 
-  item:Item = new Item() 
- // {
- // count: 1,
- // product_id: 1,
- // location_id: 1,
- // batch_id: 1,
- // expiry_date: ''
- // } 
-  product: any = {
-    id: '',
-    number: '',
-    spec: '',
-    unit: '',
-    name:''
-  }
-  batch_id: number
-  batch: any = {
-    number: '',
-    expiry_date: ''
-  }
-  inventory_id: number
-  location: string
+  item:m.Item = new m.Item() 
+  loc: m.Location = new m.Location()
+  prod: m.Product = new m.Product()
+  prod_line: m.ProductLine = new m.ProductLine()
+
   @prop
   building: string
   get locations(){
     return ['AL206','AL206试剂柜']
   }
-  showDlg(product = false, batch = false){
-    let  dlg:any = this.$refs.prod_dialog
-    debugger
-    dlg.open()
+  mounted(){
+
   }
 }
 
