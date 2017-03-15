@@ -9,7 +9,7 @@ Vue.use(ElementUI)
 Vue.use(comps)
 Vue.use(res)
 
-const rurl = 'http://localhost:3000/'
+const rurl = ''
 
 function get_url(item, action = ""){
   let name_maps = {
