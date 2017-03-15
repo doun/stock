@@ -1,7 +1,7 @@
 <template lang='pug'>
 el-row
   el-col#container
-    el-row#top(type = 'flex', align = 'middle')
+    el-row#top
       el-col#menu(:span = 11, :offset = 1)
         el-menu(theme='dark', mode='horizontal', router)
           el-menu-item(index = '/list') 库存

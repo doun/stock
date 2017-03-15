@@ -28,16 +28,14 @@ let routes = [{
   }
 ]
 
-for (let r of routes) {
-  Object.assign(r, {
-    props: function (route) {
+routes.forEach( function(r){
+  r.props = function (route) {
       if( data.SelectedBuilding)
         return {
           building: data.SelectedBuilding 
         }
     }
-  })
-}
+})
 export default new Router({
   routes
 })
