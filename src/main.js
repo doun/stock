@@ -16,7 +16,19 @@ window.data = new Vue({
   methods:{
     getBuildings(){
     },
+    init(type, obj){
+      Object.assign(obj, {name: 'asdf23'})
+    },
     submit(type, data, update_source = true){
+      if(type == 'loc'){
+        data.name = 'asdf'
+      }
+      this.$message('updated..')
+ //     this.$http.put(url, data).then((rsp)=>{
+ //       if(update_source){
+ //         console.log('updating source...')
+ //       }
+ //     })
     }
   }
 })

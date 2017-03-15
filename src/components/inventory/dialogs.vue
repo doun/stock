@@ -70,7 +70,10 @@ div
       /*由editor组件调用，显示对应dlg*/
       show(item){
         let dlg = this.$refs[item + 'Dlg']
-        if(dlg) dlg.open()
+        if(dlg){ 
+          dlg.open()
+          data.init(item, this[item])
+        }
       }
     }
   }
